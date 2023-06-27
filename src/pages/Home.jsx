@@ -1,6 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  // Example Navigate Handler - programmatic
+  const navigate = useNavigate();
+  const navigateHandler = () => {
+    navigate("/products");
+  };
+
   return (
     <>
       <h1>Home Page</h1>
@@ -10,6 +16,7 @@ const HomePage = () => {
       <p>
         Using the Link <Link to="/products">Products</Link> page.
       </p>
+      <button onClick={navigateHandler}>Navigate Products</button>
     </>
   );
 };

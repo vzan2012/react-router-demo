@@ -20,7 +20,7 @@ const ProductsPage = () => {
         <ul>
           {PRODUCTS.map((prodItem) => (
             <li key={prodItem.id}>
-              <Link to={`/products/${prodItem.id}`}>{prodItem.title}</Link>
+              <Link to={prodItem.id}>{prodItem.title}</Link>
             </li>
           ))}
         </ul>
